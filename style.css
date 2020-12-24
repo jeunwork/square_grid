@@ -1,0 +1,96 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit; 
+    font-family: 'JetBrains Mono', monospace;
+}
+body {
+    background: #333;
+}
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.wrap {
+    
+    width: 800px;
+    margin: 100px auto;
+}
+.sq {
+    color: white;
+    background: #222;
+    padding: 1rem;
+}
+.sq_item {
+    float: left;
+    width: 25%;
+    padding-top: 25%;
+    position: relative;
+}
+.sq_item a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 1rem;
+    padding: 1rem;
+    transition: transform .3s;
+    overflow: hidden;
+    border: 0px solid #000;
+    font-weight: bold;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+.sq_item a:hover {
+    transform: scale(1.2);
+    z-index: 30;
+    border-width: 10px;
+    opacity: 1;
+    font-size: 20px;
+    box-shadow: 0 0 20px 10px #ccc;
+}
+.sq_item a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.8+1,0+100 */
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 1%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 1%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 1%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    z-index: 10;
+}
+.sq_item a img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.sq_item a span {
+    position: relative;
+    z-index: 20;
+}
+.sq_item_large {
+    width: 50%;
+    padding-top: 50%;
+}
+.sq_item_wide {
+    width: 50%;
+}
+.sq_item_long {
+    padding-top: 75%;
+    float: right;
+}
